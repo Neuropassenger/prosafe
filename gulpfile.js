@@ -28,6 +28,7 @@ gulp.task('min-css', ['sass'] , function() {
 gulp.task('min-js', function() {
 	return gulp.src([
 			'src/libs/jquery/dist/jquery.min.js',
+			'src/libs/slick-carousel/slick/slick.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglifyJs())

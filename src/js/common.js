@@ -29,4 +29,18 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	var reviews_slider = $('.reviews-slider');
+	reviews_slider.slick({
+		arrows: false,
+		adaptiveHeight: true
+	});
+
+	$('#reviews-prev').click(function() {
+		reviews_slider.slick('slickPrev');
+	});
+
+	$('#reviews-next').click(function() {
+		reviews_slider.slick('slickNext');
+	});
 });

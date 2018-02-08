@@ -11,11 +11,13 @@ body
 	max-width: 1170px
 	margin: auto
 
+.top-menu, section, .footer-nav
+	position: relative
+	box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.07)
+
 .top-menu 
-	box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.16)
 	width: 100%
 	z-index: 10
-	position: relative
 	.wrapper
 		display: flex
 		justify-content: space-between
@@ -57,6 +59,7 @@ body
 				display: none
 				padding-top: 15px
 				background-color: #fff
+				border-radius: 0 0 5px 5px
 				li
 					padding: 5px
 			&:hover > ul 
@@ -84,7 +87,8 @@ body
 	z-index: 9
 	position: relative
 	.header-bg-overlay
-		background-color: rgba(44, 65, 118, 0.16)
+		//background-color: rgba(44, 65, 118, 0.3)
+		background-color: rgba(63, 43, 14, 0.3)
 	.wrapper
 		display: flex
 		flex-direction: column
@@ -120,8 +124,10 @@ body
 					justify-content: center
 					align-items: center
 					height: 100%
-					background-color: rgba(232, 140, 1, 0.65)
+					//background-color: rgba(232, 140, 1, 0.65)
 					border-radius: 10px
+					p
+						font-style: italic
 					.form-step-button
 						display: block
 						color: #fff
@@ -135,17 +141,19 @@ body
 						border: 
 							width: 2px 
 							style: solid 
-							color: #fff
+							color: $easy_accent_color
 							radius: 10px
 						text-align: center
 						line-height: 36px
 						height: 36px
 						min-width: 136px
+						margin-right: 30px
+						background-color: $easy_accent_color
 						&:hover
 							border-color: $dark_blue
-							color: $dark_blue
-					.form-step-button
-						margin-right: 30px
+							background-color: $dark_blue
+							color: $accent_color
+						
 					.form-field
 						margin-right: 30px
 						display: flex
@@ -165,7 +173,7 @@ body
 							outline: none
 							padding-left: 15px
 							border-radius: 10px
-							border: 1px solid $accent_color
+							border: 2px solid $easy_accent_color
 							height: 26px
 							width: 175px
 							font:
@@ -184,45 +192,298 @@ section
 			weight: 400
 		text-transform: uppercase
 		letter-spacing: 2px
+		margin:
+			top: 60px
+			bottom: 40px
 
 .about
-	margin-top: 38px
-	display: flex
-	flex-direction: column
-	align-items: center
+	padding:
+		bottom: 40px
 	width: 100%
-	h2
-		color: $dark-blue
-	.advantages
-		margin-top: 38px
-		display: flex
-		justify-content: space-around
-		width: 100%
-	.icontext
+	.wrapper
 		display: flex
 		flex-direction: column
 		align-items: center
-		max-width: 256px
-		h3
+		h2
+			color: $dark-blue
+		.advantages
+			display: flex
+			justify-content: space-around
+			width: 100%
+		.icontext
+			max-width: 256px
+			i
+				color: $dark_blue
+			h3
+				color: $dark_blue
+				max-width: 200px
+			p
+				color: $light_black
+
+.icontext
+	display: flex
+	flex-direction: column
+	align-items: center
+	i
+		font-size: 68px
+	h3
+		margin-top: 10px
+		font:
+			family: 'Montserrat'
+			weight: 700
+			size: 20px
+		text-transform: uppercase
+		text-align: center
+		line-height: 25px
+	p
+		margin-top: 20px
+		text-align: center
+		font:
+			family: 'Noto Sans'
+			size: 16px
+			weight: 400
+		line-height: 28px
+		letter-spacing: 1px
+
+.whyus
+	z-index: 8
+
+.howwework
+	z-index: 7
+			
+.work-steps
+	li
+		max-width: 700px
+		margin-top: 20px
+		display: flex
+		align-items: center
+		.number
 			font:
-				family: 'Montserrat'
-				weight: 700
-				size: 20px
-			text-transform: uppercase
+				family: 'Patua One'
+				size: 72px
+			color: $accent_color
+			min-width: 100px
 			text-align: center
-			line-height: 25px
-			color: $dark_blue
-			max-width: 200px
-		p
-			margin-top: 27px
-			text-align: center
+		p 
 			font:
 				family: 'Noto Sans'
 				size: 16px
 				weight: 400
-			line-height: 28px
 			letter-spacing: 1px
+			line-height: 28px
 			color: $light_black
+			a
+				color: $accent_color
+				text-decoration: none
+				&:hover
+					color: $dark_blue
 
+.services
+	z-index: 6
+	background: 
+		image: url('../img/truckmin.jpg') 
+		size: cover
+		position: center
+	color: #fff
+	.overlay
+		background-color: rgba(44, 65, 118, 0.6)
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		.services-list
+			display: flex
+			justify-content: space-around
+			flex-wrap: wrap
+			margin-bottom: 64px
+			.icontext
+				flex-basis: 440px
+				margin-top: 50px
+				&:nth-child(1) h3
+					max-width: 150px
+				&:nth-child(2) h3
+					max-width: 170px
+				&:nth-child(3) h3
+					max-width: 140px
+				&:nth-child(4) h3
+					max-width: 180px
+				p
+					max-width: 440px
+				a
+					color: #fff
+					text-decoration: none
+					text-transform: uppercase
+					font:
+						family: 'Montserrat'
+						size: 16px
+						weight: 500
+					letter-spacing: 1px
+					border:
+						width: 2px
+						style: solid
+						radius: 10px
+						color: $easy_accent_color
+					background-color: $easy_accent_color
+					margin-top: 24px
+					width: 218px
+					height: 49px
+					line-height: 49px
+					text-align: center
+					&:hover
+						background-color: $dark_blue
+						border-color: $dark_blue
+						color: $accent_color
 
-			
+.reviews
+	z-index: 5
+	padding-bottom: 60px
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		.reviews-carousel
+			display: flex
+			align-items: center
+			.left-angle
+				margin-right: 60px
+			.right-angle
+				margin-left: 60px
+			.angle
+				color: $accent_color
+				font-size: 35px
+				&:hover
+					color: $dark_blue
+			.reviews-slider
+				max-width: 850px
+				div
+					font: 
+						family: 'Montserrat'
+						weight: 500
+						style: italic
+					line-height: 28px
+					letter-spacing: 0.8px
+					text-align: center
+					.author-name
+						margin-top: 20px
+						color: $accent_color
+
+.cta
+	z-index: 4
+	background: 
+		image: url('../img/truck2min.jpg') 
+		size: cover
+		position: center
+	.overlay
+		background-color: rgba(44, 65, 118, 0.5)
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		h2
+			color: #fff
+		p
+			max-width: 800px
+			color: #fff
+			font:
+				family: 'Noto Sans'
+				size: 18px
+				weight: 400
+			letter-spacing: 1px
+			line-height: 28px
+		a
+			text-decoration: none
+			text-transform: uppercase
+			color: #fff
+			font:
+				family: 'Montserrat'
+				size: 19px
+				weight: 700
+			border:
+				width: 2px
+				style: solid
+				radius: 10px
+				color: $easy_accent_color
+			width: 270px
+			height: 58px
+			line-height: 58px
+			text-align: center
+			background-color: $easy_accent_color
+			margin:
+				top: 35px
+				bottom: 50px
+			letter-spacing: 1px
+			&:hover
+				background-color: $dark_blue
+				border-color: $dark_blue
+				color: $accent_color
+
+.footer-nav
+	background-color: #1E2C4E
+	z-index: 3
+	.wrapper
+		display: flex
+		flex-direction: column
+		align-items: center
+		.social-links
+			margin:
+				top: 28px
+				bottom: 40px
+			display: flex
+			a
+				display: block
+				background-color: #D8DDE9
+				width: 40px
+				height: 40px
+				color: #1E2C4E
+				line-height: 40px
+				text-align: center
+				border-radius: 20px
+				margin-right: 15px
+				font-size: 20px
+				&:hover
+					color: $easy_accent_color
+			li:last-child a
+				margin-right: 0
+
+		.site-links
+			display: flex
+			justify-content: space-around
+			width: 100%
+			margin-bottom: 15px
+			ul, div
+				min-width: 240px
+				h4
+					text-align: center
+					color: #D8DDE9
+					font:
+						family: 'Patua One'
+						size: 20px
+					margin-bottom: 15px
+				li, address
+					text-align: center
+					font:
+							family: 'Montserrat'
+							size: 14px
+							weight: 400
+					color: #D8DDE9
+					line-height: 28px
+					letter-spacing: 1px
+					a
+						color: #D8DDE9
+						text-decoration: none
+						&:hover
+							color: $accent_color
+
+.copyrights
+	text-align: center
+	font:
+		family: 'Montserrat'
+		size: 14px
+		line-height: 18px
+		weight: 400
+	letter-spacing: 1px
+	padding:
+		top: 15px
+		bottom: 15px
+	background-color: #15203A
+	color: #D8DDE9			
