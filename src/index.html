@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ProSafe Home Page</title>
 	<link rel="stylesheet" type="text/css" href="css/libs.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
 </head>
 <body>
 	<header>
-		<nav class="top-menu">
+		<div class="top-line">
 			<div class="wrapper">
 				<img src="img/logo.png" alt="ProSafe" class="top-logo">
-				<ul>
-					<li><a href="#">Services <i class="fas fa-angle-down"></i></a>
-						<ul>
+				
+				<input type="checkbox" class="mobile-checkbox" id="burger">
+				<label for="burger" id="burger-icon"></label>
+
+				<ul class="top-menu">
+					<li class="dropdown"><input type="checkbox" id="dropdown-checkbox"><a href="#">Services<label for="dropdown-checkbox" id="dropdown-angle-icon"></label></a>
+
+						<ul class="submenu">
 							<li><a href="#">Local Moving</a></li>
 							<li><a href="#">Long Distance Moving</a></li>
 							<li><a href="#">Residental Moving</a></li>
 							<li><a href="#">Commercial Moving</a></li>
 						</ul>
+
 					</li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">About Us</a></li>
@@ -25,16 +33,17 @@
 				</ul>
 				<div class="top-phone">
 					<p>Need help? Call Us</p>
-					<strong>(201) 351-4777</strong>
+					<address>(201) 351-4777</address>
 				</div>
 			</div>
-		</nav>
+		</div>
+
 		<div class="header-content">
 			<div class="header-bg-overlay">
 				<div class="wrapper">
 					<h1>ProSafe - New Jersey Movers</h1>
-					<form class="header-form" action="#">
-						<div class="form-step">
+					<form class="header-form" action="#" id="moving-form">
+						<div class="form-step form-step-1">
 							<p>Tell us about your moving</p>
 							<div class="form-step-content">
 
@@ -62,7 +71,7 @@
 							</div>
 						</div>
 
-						<div class="form-step">
+						<div class="form-step form-step-2">
 							<p>Tell us about yourself</p>
 							<div class="form-step-content">
 								<a href="#" class="form-step-back form-step-button">Back</a>
@@ -192,7 +201,7 @@
 		<div class="wrapper">
 			<h2><span class="accent-on-white">Reviews</span></h2>
 			<div class="reviews-carousel">
-				<a href="#prev" id="reviews-prev" class="left-angle angle"><i class="fas fa-chevron-left"></i></a>
+				<a href="#prev" class="reviews-prev left-angle angle d-angle"><i class="fas fa-chevron-left"></i></a>
 
 				<div class="reviews-slider">
 					<div>
@@ -209,7 +218,11 @@
 					</div>
 				</div>
 
-				<a href="#next" id="reviews-next" class="right-angle angle"><i class="fas fa-chevron-right"></i></a>
+				<div class="m-angles">
+					<a href="#prev" class="reviews-prev left-angle angle"><i class="fas fa-chevron-left"></i></a>
+					<a href="#next" class="reviews-next right-angle angle"><i class="fas fa-chevron-right"></i></a>
+				</div>
+				<a href="#next" class="reviews-next right-angle angle d-angle"><i class="fas fa-chevron-right"></i></a>
 			</div>
 		</div>
 	</section>
@@ -219,7 +232,7 @@
 			<div class="wrapper">
 				<h2><span class="accent-on-white">Ready</span> To Move?</h2>
 				<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</p>
-				<a href="#free-quote">Free Quote</a>
+				<a href="#moving-form" class="liquid-anchor-scroll">Free Quote</a>
 			</div>
 		</div>
 	</section>
@@ -269,8 +282,8 @@
 	</footer>
 
 	<!-- SCRIPTS -->
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script type="text/javascript" src="js/libs.min.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

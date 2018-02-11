@@ -1,0 +1,181 @@
+@import "../sass/assets.sass"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+@media only screen and (max-width : 1090px)
+	.form-step-1
+		.form-step-content
+			.form-field
+				flex-basis: 45%
+	
+	.form-step-button
+		margin-top: 20px
+
+	.form-field
+		margin-top: 20px
+
+	.form-step-2
+		.form-step-content
+			.form-field
+				flex-basis: 100%
+	/*.reviews-slider
+		max-width: 600px*/
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/* */
+
+@media only screen and (max-width : 800px)
+	.top-line
+		.wrapper
+			.top-menu
+				overflow: hidden
+				max-height: 0
+				flex-direction: column
+				flex-basis: 100%
+				order: 1
+				align-items: center
+				margin: 0
+				transition: max-height, margin 0.5s
+				li
+					margin-left: 0 !important
+					padding:
+						top: 5px
+						bottom: 5px
+					a
+						font-size: 20px
+				.dropdown
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					ul
+						li
+							a
+								text-align: center
+					.submenu
+						overflow: hidden
+						max-height: 0
+						margin: 0
+						transition: max-height, margin 0.5s
+					#dropdown-angle-icon
+						font:
+							size: 20px
+							weight: 400
+						&:after
+							content: "\f13a"
+					#dropdown-checkbox
+						&:checked + a #dropdown-angle-icon
+							&:after
+								content: "\f139" !important
+						&:checked ~ .submenu
+							margin:
+								top: 15px
+								bottom: 5px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.form-step-1
+		.form-step-content
+			.form-field
+				flex-basis: 100%
+
+	.d-angle
+		display: none
+
+	.reviews-carousel
+		flex-direction: column
+
+	.m-angles
+		margin-top: 15px
+
+	.top-phone
+		display: none
+		//font-size: 22px
+
+	.top-logo
+		max-height: 60px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	.m-angles
+		display: none
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+@media only screen and (min-width : 800px)
+	#burger-icon
+		display: none
+
+	.top-line
+		.wrapper
+			li 
+				a:hover
+					color: $accent-color
+				ul
+					position: absolute
+					min-width: 200px
+					display: none
+					padding-top: 15px
+					background-color: #fff
+					border-radius: 0 0 5px 5px
+					li
+						padding: 5px
+				&:hover > ul 
+					display: block
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/

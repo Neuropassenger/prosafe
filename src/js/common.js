@@ -36,11 +36,21 @@ $(document).ready(function(){
 		adaptiveHeight: true
 	});
 
-	$('#reviews-prev').click(function() {
+	$('.reviews-prev').click(function() {
 		reviews_slider.slick('slickPrev');
 	});
 
-	$('#reviews-next').click(function() {
+	$('.reviews-next').click(function() {
 		reviews_slider.slick('slickNext');
 	});
+
+	FontAwesomeConfig = { searchPseudoElements: true };
+
+
+ 	$("a.liquid-anchor-scroll").click(function () {
+ 		var elementClick = $(this).attr("href");
+ 		var destination = $(elementClick).offset().top;
+ 		$('html,body').animate( { scrollTop: destination }, 1100 );
+ 		return false;
+ 	});
 });
