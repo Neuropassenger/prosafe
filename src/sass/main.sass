@@ -82,7 +82,8 @@ body
 	position: relative
 	.header-bg-overlay
 		//background-color: rgba(44, 65, 118, 0.3)
-		background-color: rgba(63, 43, 14, 0.3)
+		//background-color: rgba(63, 43, 14, 0.3)
+		background-color: rgba(217, 142, 27, 0.3)
 	.wrapper
 		display: flex
 		flex-direction: column
@@ -391,6 +392,7 @@ section
 			letter-spacing: 1px
 			line-height: 28px
 		a
+			display: block
 			text-decoration: none
 			text-transform: uppercase
 			color: #fff
@@ -532,3 +534,19 @@ section
 	&:after
 		content: "\f0d7"
 
+.error
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-around
+	min-height: 300px
+	h2, p
+		margin: 0
+		text-align: center
+		color: $accent_color
+	p
+		margin-top: 30px
+		font:
+			family: 'Patua One'
+			size: 24px
+		color: $dark_blue

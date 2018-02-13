@@ -1,0 +1,88 @@
+@import "../sass/assets.sass"
+
+main
+	position: relative
+	box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.07)
+
+main
+	z-index: 8
+	.wrapper
+		margin-bottom: 30px
+		max-width: 630px
+		h2, h3
+			font:
+				family: 'Patua One'
+			color: $dark_blue
+			letter-spacing: 1px
+		h2
+			font-size: 32px
+			margin:
+				top: 35px
+				bottom: 15px
+		h3
+			font-size: 24px
+			margin:
+				top: 30px
+		p
+			font:
+				family: 'Noto Sans'
+				size: 16px
+			letter-spacing: 1px
+			line-height: 28px
+			margin-top: 25px
+			color: $light_black
+
+.reviews
+	z-index: 7
+	.wrapper
+		h2
+			//margin-top: 30px
+			text-transform: none
+		.reviews-slider
+			div
+				.stars
+					margin-top: 15px
+					color: $accent_color
+				.author-image
+					margin:
+						top: 15px
+						left: auto
+						right: auto
+					width: 100px
+					height: 100px
+					background:
+						image: url('../img/john.jpg');
+						position: center
+						size: cover
+					border:
+						radius: 50px
+						width: 2px
+						style: solid
+						color: $accent_color
+
+.subpages
+	z-index: 6
+	.wrapper
+		margin-bottom: 45px
+		h2
+			text-transform: none
+			text-align: center
+			color: $dark_blue
+	ul
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		li
+			flex-basis: 200px
+			text-align: center
+			margin-bottom: 20px
+			a
+				text-decoration: none
+				color: $dark_blue
+				font:
+					family: 'Montserrat'
+					weight: 500
+					size: 16px
+				&:hover
+					color: $accent_color
+

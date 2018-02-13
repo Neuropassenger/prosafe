@@ -1,0 +1,151 @@
+@import "../sass/assets.sass"
+
+.header-content
+	.wrapper
+		strong
+			margin-top: 35px
+			color: $dark_blue
+			font:
+				family: 'Patua One'
+				size: 42px
+			letter-spacing: 2px
+			text-align: center
+
+.main-content
+	box-shadow: none
+	max-width: 720px
+	.post
+		display: flex
+		flex-direction: column
+		margin-bottom: 60px
+		h1
+			font:
+				family: 'Patua One'
+				size: 32px
+			text-transform: none
+			color: $dark_blue
+			text-decoration: none
+		h2, h1
+			margin:
+					top: 0px
+					bottom: 12px
+			a
+				font:
+					family: 'Patua One'
+					size: 32px
+				text-transform: none
+				color: $dark_blue
+				text-decoration: none
+				&:hover
+					color: $accent_color
+		.meta
+			font:
+				family: 'Montserrat'
+				weight: 500
+				size: 14px
+			letter-spacing: 1px
+			color: #8E94A4
+			svg
+				font-size: 6px
+				margin:
+					bottom: 3px
+					left: 3px
+					right: 3px
+		.post-preview
+			margin:
+				top: 30px
+				bottom: 30px
+			width: 100%
+			height: 340px
+			background:
+				size: cover
+				position: center
+			border-radius: 7px
+		p
+			font:
+				family: 'Noto Sans'
+				size: 16px
+			letter-spacing: 1px
+			line-height: 28px
+			color: $light_black
+		.post-button
+			text-decoration: none
+			font: 
+				family: 'Montserrat'
+				size: 16px
+				weight: 500
+			width: 170px
+			height: 32px
+			color: $accent_color
+			border:
+				width: 2px
+				style: solid
+				color: $accent_color
+				radius: 5px
+			line-height: 32px
+			text-align: center
+			align-self: center
+			margin-top: 15px
+			&:hover
+				background-color: $dark_blue
+				border-color: $dark_blue
+
+	.pagination-links
+		display: flex
+		justify-content: space-between
+		a
+			text-decoration: none
+			color: $accent_color
+			font: 
+				family: 'Montserrat'
+				weight: 500
+				size: 16px
+		.prev-posts:before
+			font:
+				family: 'FontAwesome'
+				size: 18px
+			content: '\f100'
+			margin-right: 15px
+		.next-posts:after
+			font:
+				family: 'FontAwesome'
+				size: 18px
+			content: '\f101'
+			margin-left: 15px
+
+.main-content-wrapper
+	margin:
+		top: 40px
+		bottom: 40px
+	display: flex
+	justify-content: space-around
+	aside
+		font:
+			family: 'Montserrat'
+		color: $light_black
+		margin:
+			top: 30px
+			left: 30px
+		ul
+			margin-bottom: 15px
+			h3
+				font:
+					size: 16px
+					weight: 500
+				letter-spacing: 1px
+				line-height: 28px
+			li
+				//max-width: 140px
+				a
+					text-decoration: none
+					color: $light_black
+					letter-spacing: 1px
+					line-height: 28px
+					font:
+						size: 14px
+						weight: 400
+					&:hover
+						color: $accent_color
+		ul:last-child
+			margin-bottom: 0
+

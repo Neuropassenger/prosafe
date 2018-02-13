@@ -187,7 +187,7 @@ body {
 }
 
 .header-content .header-bg-overlay {
-  background-color: rgba(63, 43, 14, 0.3);
+  background-color: rgba(217, 142, 27, 0.3);
 }
 
 .header-content .wrapper {
@@ -900,4 +900,37 @@ section h2 {
 
 #dropdown-angle-icon:after {
   content: "\f0d7";
+}
+
+.error {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  min-height: 300px;
+}
+
+.error h2, .error p {
+  margin: 0;
+  text-align: center;
+  color: #FF9900;
+}
+
+.error p {
+  margin-top: 30px;
+  font-family: 'Patua One';
+  font-size: 24px;
+  color: #2C4176;
 }

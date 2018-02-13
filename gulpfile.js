@@ -17,7 +17,15 @@ gulp.task('sass', function() {
 });
 
 gulp.task('min-css', ['sass'] , function() {
-	return gulp.src('src/css/libs.css')
+	return gulp.src([
+		'src/css/libs.css',
+		'src/css/main.css',
+		'src/css/media.css',
+		'src/css/page.css',
+		'src/css/blogpost.css',
+		'src/css/blog.css',
+		])
+	//return gulp.src('src/css/styles.css')
 	.pipe(cssNano())
 	.pipe(rename({
 		suffix: '.min'
@@ -44,7 +52,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', ['browser-sync'], function() {
-	gulp.watch('src/sass/**/*.sass', ['sass']);
+	gulp.watch('src/sass/**/*.sass', ['min-css']);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
 	gulp.watch('src/**/*.html', browserSync.reload);
 });
@@ -56,9 +64,11 @@ gulp.task('clean', function() {
 gulp.task('build', ['clean', 'min-css', 'min-js'], function() {
 	var buildCss = gulp.src([
 			'src/css/libs.min.css',
-			'src/css/main.css',
-			'src/css/media.css',
-			'src/css/fonts.css'
+			'src/css/main.min.css',
+			'src/css/media.min.css',
+			'src/css/page.min.css',
+			'src/css/blog.min.css',
+			'src/css/blogpost.min.css',
 		])
 	.pipe(gulp.dest('dist/css'));
 
