@@ -26,7 +26,7 @@ gulp.task('min-css', ['sass'] , function() {
 		'src/css/blog.css',
 		])
 	//return gulp.src('src/css/styles.css')
-	.pipe(cssNano())
+	.pipe(cssNano({ minifyFontValues: false, discardUnused: false }))
 	.pipe(rename({
 		suffix: '.min'
 	}))
