@@ -706,6 +706,7 @@ section h2 {
 }
 
 .cta .wrapper a {
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
@@ -869,7 +870,7 @@ section h2 {
 }
 
 #burger-icon:after {
-  font-family: 'FontAwesome';
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   font-size: 36px;
   content: "\f0c9";
@@ -892,13 +893,14 @@ section h2 {
 
 #dropdown-angle-icon {
   margin-left: 5px;
-  font-family: 'FontAwesome';
-  font-size: 16px;
   color: #2C4176;
   cursor: pointer;
 }
 
 #dropdown-angle-icon:after {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 16px;
+  font-weight: 900;
   content: "\f0d7";
 }
 

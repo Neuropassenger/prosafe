@@ -52,6 +52,14 @@
 }
 
 .main-content .post .meta {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Montserrat';
   font-weight: 500;
   font-size: 14px;
@@ -59,11 +67,11 @@
   color: #8E94A4;
 }
 
-.main-content .post .meta svg {
+.main-content .post .meta i {
+  display: inline-block;
   font-size: 6px;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .main-content .post .post-preview {
@@ -132,15 +140,17 @@
 }
 
 .main-content .pagination-links .prev-posts:before {
-  font-family: 'FontAwesome';
+  font-family: 'Font Awesome 5 Free';
   font-size: 18px;
+  font-weight: 900;
   content: '\f100';
   margin-right: 15px;
 }
 
 .main-content .pagination-links .next-posts:after {
-  font-family: 'FontAwesome';
+  font-family: 'Font Awesome 5 Free';
   font-size: 18px;
+  font-weight: 900;
   content: '\f101';
   margin-left: 15px;
 }

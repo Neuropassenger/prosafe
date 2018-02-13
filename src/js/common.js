@@ -44,7 +44,7 @@ $(document).ready(function(){
 		reviews_slider.slick('slickNext');
 	});
 
-	FontAwesomeConfig = { searchPseudoElements: true };
+	//window.FontAwesomeConfig = { searchPseudoElements: true };
 
 
  	$("a.liquid-anchor-scroll").click(function () {

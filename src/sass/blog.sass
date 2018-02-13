@@ -39,18 +39,20 @@
 				&:hover
 					color: $accent_color
 		.meta
+			display: flex
+			align-items: center
 			font:
 				family: 'Montserrat'
 				weight: 500
 				size: 14px
 			letter-spacing: 1px
 			color: #8E94A4
-			svg
+			i
+				display: inline-block
 				font-size: 6px
 				margin:
-					bottom: 3px
-					left: 3px
-					right: 3px
+					left: 7px
+					right: 7px
 		.post-preview
 			margin:
 				top: 30px
@@ -70,7 +72,7 @@
 			color: $light_black
 		.post-button
 			text-decoration: none
-			font: 
+			font:
 				family: 'Montserrat'
 				size: 16px
 				weight: 500
@@ -96,20 +98,22 @@
 		a
 			text-decoration: none
 			color: $accent_color
-			font: 
+			font:
 				family: 'Montserrat'
 				weight: 500
 				size: 16px
 		.prev-posts:before
 			font:
-				family: 'FontAwesome'
+				family: 'Font Awesome 5 Free'
 				size: 18px
+				weight: 900
 			content: '\f100'
 			margin-right: 15px
 		.next-posts:after
 			font:
-				family: 'FontAwesome'
+				family: 'Font Awesome 5 Free'
 				size: 18px
+				weight: 900
 			content: '\f101'
 			margin-left: 15px
 
@@ -148,4 +152,3 @@
 						color: $accent_color
 		ul:last-child
 			margin-bottom: 0
-
